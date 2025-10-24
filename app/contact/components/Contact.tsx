@@ -14,7 +14,7 @@ export default function Contact() {
         </div>
       </div>
 
-      <div className="bg-[#fff] mb-16 mt-14">
+      <div className="bg-[#fff] mb-16 mt-16">
         <Image
           src="/ourOffices.png"
           alt="I Search"
