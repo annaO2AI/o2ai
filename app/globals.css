@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  color: rgb(var(--foreground-rgb));
+}
+
+/* ✅ Custom utilities using @layer if needed */
+@layer utilities {
+  .background-chat-ui{
+    background-size:cover ;
+    background-color: #F4F8FB;
+  }
+  .o2-title{
+    color: #111827;
+  }
+  .o2-sub-title{
+    color: #6B7280;
+  }
+  .o-custome-shoudo::after{
+    width: 100%;
+    height: 20px;
+    content: "";
+    display: block;
+    position: absolute;
+    background-image: url(../public/shadowheader.svg); 
+    background-position: bottom;
+    bottom: -20px;
+    background-size: 100%;
+  }
+  .subscrib{
+    width: 1067px;
+  }
+  .subscrib-img{
+    height: 400px;
+    width: 500px;
+    position: relative;
+  }
+  .subscrib-img img{ 
+     position: absolute;
+    bottom: 0;
+  }
+  .banner-bg-wrapper{
+     background-image: url(../public/banner-bg-cr.png); 
+    background-size: 1880px;
+    background-position: center -99px;
+    background-repeat: no-repeat;
+    padding-bottom: 80px;
+  }
+  .navCustomeStyle a{
+    display: flex; 
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+  .navCustomeStyle a.active{
+    font-weight: bold;
+    color: #0975BB;
+  }
+  .Product-bg-wrapper{
+    background-color: #06093C;
+    background-image: url(../public/productBanner-bg.png); 
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    min-height: 460px;
+  }
+   .about-bg-wrapper{
+    background-color: #000103;
+    background-image: url(../public/Abouto2Al.png); 
+    background-position: center -40px;
+    background-repeat: no-repeat;
+  }
+  .mission-section-bg{
+    background-color: #2B5758;
+    background-image: url(../public/missioBg.png); 
+    background-position: -190px -260px;
+    background-repeat: no-repeat;
+    background-size: 110%;
+    min-height: 600px;
+    align-content: center;
+  }
+  .desing-boxmission{
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 16px;
+  }
+  .contact-form-c{
+    margin-top: -130px;
+    background: #FFFFFF;
+    background: linear-gradient(178deg,rgba(255, 255, 255, 1) 73%, rgba(227, 227, 227, 1) 100%);
+  }
+  .shadow-custome{
+    box-shadow: 1px 1px 80px #00000028;
+  }
+  .overEffect{
+    transition: all 0.2s ease-out;
+    cursor: pointer;
+  }
+  .overEffect:hover{
+    box-shadow: 1px 1px 30px #00000033  ;
+  }
+  .IntegrationsSection{
+    background-color: #06093C;
+    background-image: url(../public/productBanner-bg.png); 
+    background-position: bottom right;
+    background-repeat: no-repeat;
+  }
+}
