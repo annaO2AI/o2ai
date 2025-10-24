@@ -13,7 +13,8 @@ export default function Contact() {
           <ContactUs />
         </div>
       </div>
-      <div className="bg-[#fff] mb-16 mt-16">
+
+      <div className="bg-[#fff] mb-16 mt-14">
         <Image
           src="/ourOffices.png"
           alt="I Search"
