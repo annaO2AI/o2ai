@@ -57,20 +57,20 @@ export default function Footer() {
           <h3 className="text-white mb-2 text-[18px] font-bold">General</h3>
           <ul className="opacity-[.67]">
             <li className="text-white font-normal mb-2">
-              <a href="/"> Home</a>
+              <Link  href="/"> Home</Link>
             </li>
             <li className="text-white font-normal mb-2">
-              <a href="/products">
+              <Link  href="/products">
                 Products
-              </a>
+              </Link>
             </li>
              <li className="text-white font-normal mb-2">
-              <a href="/about">About O2.AI  </a>
+              <Link  href="/about">About O2.AI  </Link>
             </li>
             <li className="text-white font-normal mb-2">
-              <a href="/contact">
+              <Link  href="/contact">
                 Contact
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -78,11 +78,11 @@ export default function Footer() {
         <div className="w-[20%]">
           <h3 className="text-white mb-2 text-[18px] font-bold">Products</h3>
           <ul className="opacity-[.67]">
-            <li className="text-white font-normal mb-2"> <a href="/products">AI Call Summary</a></li>
-            <li className="text-white font-normal mb-2"> <a href="/products">AI Search</a></li>
-            <li className="text-white font-normal mb-2"> <a href="/products">AI Ops</a></li>
-            <li className="text-white font-normal mb-2"> <a href="/products">AI Finder</a></li>
-            <li className="text-white font-normal mb-2"> <a href="/products">AI Fax Automation </a></li>
+            <li className="text-white font-normal mb-2"> <Link  href="/products">AI Call Summary</Link></li>
+            <li className="text-white font-normal mb-2"> <Link  href="/products">AI Search</Link></li>
+            <li className="text-white font-normal mb-2"> <Link  href="/products">AI Ops</Link></li>
+            <li className="text-white font-normal mb-2"> <Link  href="/products">AI Finder</Link></li>
+            <li className="text-white font-normal mb-2"> <Link  href="/products">AI Fax Automation </Link></li>
           </ul>
         </div>
 
