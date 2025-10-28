@@ -40,7 +40,7 @@ const AIOps = () => {
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50" onClick={closeVideo}>
           <div className="bg-white p-12 rounded-lg w-[900px] relative desing-boxmission">
             <video controls autoPlay>
-              <source src="/video/AISearch6.mp4" type="video/mp4" />
+              <source src="/video/AISearch.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
             <button
