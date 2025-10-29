@@ -23,7 +23,7 @@ export default function About() {
       <div className="bg-[#fff] pt-16 pb-16" >
         <div className="text-center pb-16">
           <h3 className="o2-title text-[36px] font-bold">Our Vision</h3>
-          <div className="o2-sub-title text-[20px]">At O2, our vision is a world where AI will prompt and extend anthropoid cognition so <br></br> institutions and individuals can  live up to their potential. Technology seamlessly <br></br> enhances the individual&apos;s journey to well-being. </div>
+          <div className="o2-sub-title text-[20px]">At O2, our vision is a world where AI will prompt and extend anthropoid cognition to enable <br></br>institutions and individuals to live up to their potential. Our technology seamlessly <br></br>enhances every individual's pursuit of well-being.</div>
         </div>
         <Image
           src="/ourVison.png"
