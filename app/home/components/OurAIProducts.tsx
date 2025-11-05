@@ -36,7 +36,7 @@ const OurAIProducts = () => {
           </div>
           
           <p className="text-gray-600 mb-4">
-            Lorem ipsum is simply dummy text of the printing and typesetting industry. Lorem ipsum has been the industry&apos;s standard dummy text ever since the...
+            AIOps stands for Artificial Intelligence for IT Operations and is the strategic use of AI and machine learning (ML) to automate and streamline IT...
           </p>
           <a href="/products" className="text-blue-600 hover:underline flex gap-2 items-center">View Details <ArrowRightIconLink /></a>
         </div>

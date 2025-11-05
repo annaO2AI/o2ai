@@ -26,7 +26,7 @@ const AIOps = () => {
         <div className="w-[40%] py-4">
           <h2 className=" font-bold o2-title mb-4 text-[30px]">AI Ops</h2>
           <p className="text-gray-600 mb-4">
-            AI.Ops is a centralized, AI-enabled application that acts like a virtual Network Operations Center (NOC) and Security Operations Center (SOC) combination where computer, telecommunications, or satellite network systems and the security centers that protect them are monitored and managed 24x7.
+            AIOps stands for Artificial Intelligence for IT Operations and is the strategic use of AI and machine learning (ML) to automate and streamline IT operations. It analyzes large volumes of data from various IT sources to provide insights like anomaly detection, root cause analysis, and automated remediation, which helps prevent issues before they impact users and speeds up problem resolution. This allows IT teams to manage complexity, reduce costs, and improve efficiency in modern IT environments.
           </p>
           <div className="flex space-x-4">
             <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
