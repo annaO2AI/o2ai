@@ -78,7 +78,7 @@ export default function Footer() {
         <div className="w-[20%]">
           <h3 className="text-white mb-2 text-[18px] font-bold">Products</h3>
           <ul className="opacity-[.67]">
-            <li className="text-white font-normal mb-2"> <Link  href="/products">AI Call Summary</Link></li>
+            <li className="text-white font-normal mb-2"> <Link  href="/products">Service Desk AI</Link></li>
             <li className="text-white font-normal mb-2"> <Link  href="/products">AI Search</Link></li>
             <li className="text-white font-normal mb-2"> <Link  href="/products">AI Ops</Link></li>
             <li className="text-white font-normal mb-2"> <Link  href="/products">AI Finder</Link></li>
