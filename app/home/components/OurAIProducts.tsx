@@ -10,11 +10,11 @@ const OurAIProducts = () => {
         <div className="bg-white p-8 rounded-lg overEffect">
           <div className="flex items-center  gap-3 mb-4">
             <AiCallSummary />
-            <h3 className="text-[24px] font-semibold o2-title mb-2">Service Desk AI</h3>
+            <h3 className="text-[24px] font-semibold o2-title mb-2">ServiceDesk AI</h3>
           </div>
           
           <p className="text-gray-600 mb-4">
-            Service Desk AI automatically captures key points, emotions, and sentiments from IVR calls. It integrates with ServiceNow and can be customized to export PDFs to other applications.
+            ServiceDesk AI automatically captures key points, emotions, and sentiments from IVR calls. It integrates with ServiceNow and can be customized to export PDFs to other applications.
           </p>
           <a href="/products" className="text-blue-600 hover:underline flex gap-2 items-center">View Details <ArrowRightIconLink /></a>
         </div>
