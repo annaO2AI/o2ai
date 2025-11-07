@@ -46,7 +46,7 @@ const OurAIProducts = () => {
             <h3 className="text-[24px] font-semibold o2-title mb-2">ClinicalAI</h3>
           </div>
           <p className="text-gray-600 mb-4">
-            AI Medical Scribe automates clinical documentation, reduces admin work and EHR enhancing patient care. It integrates with EHR and ICD-10, securely storing data per HIPAA standards on the client&apos;s cloud.
+            AI Medical Scribe automates clinical documentation in SOAP format, reduces admin work, and enhances patient care. It integrates with EHR and ICD-10, securely storing data per HIPAA standards on the client&apos;s cloud.
           </p>
           <a href="/products" className="text-blue-600 hover:underline flex gap-2 items-center">View Details <ArrowRightIconLink /></a>
         </div>
