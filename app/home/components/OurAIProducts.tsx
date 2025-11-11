@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {AiCallSummary,AISearch,AIOpsIcon,ClinicalAI,FaxAutomation,EmployeeEnablement, ArrowRightIconLink} from "./../../components/icons"
+import {AiCallSummary,AISearch,AIOpsIcon,ClinicalAI,FaxAutomation,EmployeeEnablement, ArrowRightIconLink, IVR} from "./../../components/icons"
 
 const OurAIProducts = () => {
   return (
@@ -14,10 +14,59 @@ const OurAIProducts = () => {
           </div>
           
           <p className="text-gray-600 mb-4">
-            ServiceDesk AI automatically captures key points, emotions, and sentiments from IVR calls. It integrates with ServiceNow and can be customized to export PDFs to other applications.
+            ServiceDesk AI captures key points of the calls, emotions, and sentiments from the IVR calls.
           </p>
           <a href="/products" className="text-blue-600 hover:underline flex gap-2 items-center">View Details <ArrowRightIconLink /></a>
         </div>
+
+        <div className="bg-white p-8 rounded-lg overEffect">
+          <div className="flex items-center  gap-3 mb-4">
+             <ClinicalAI />
+            <h3 className="text-[24px] font-semibold o2-title mb-2">ClinicalAI</h3>
+          </div>
+          <p className="text-gray-600 mb-4">
+            AI medical scribes automate clinical documentation and complete the charting for providers and nurses in SOAP format.
+          </p>
+          <a href="/products" className="text-blue-600 hover:underline flex gap-2 items-center">View Details <ArrowRightIconLink /></a>
+        </div>
+
+        <div className="bg-white p-8 rounded-lg overEffect">
+          <div className="flex items-center  gap-3 mb-4">
+            <FaxAutomation />
+            <h3 className="text-[24px] font-semibold o2-title mb-2">Fax Automation</h3>
+          </div>
+          
+          <p className="text-gray-600 mb-4">
+            AI Fax automation reads, classifies, and routes faxes automatically, reducing manual work for healthcare staff.  It uses NLP to extract data accurately,  speeding up the workflow.
+          </p>
+          <a href="/products" className="text-blue-600 hover:underline flex gap-2 items-center">View Details <ArrowRightIconLink /></a>
+        </div>
+
+
+        <div className="bg-white p-8 rounded-lg overEffect">
+          <div className="flex items-center  gap-3 mb-4">
+            <AIOpsIcon />
+            <h3 className="text-[24px] font-semibold o2-title mb-2">AI Ops</h3>
+          </div>
+          
+          <p className="text-gray-600 mb-4">
+            AIOps automates and streamlines operational work by analyzing data from various sources and auto-remediates the resolution.
+          </p>
+          <a href="/products" className="text-blue-600 hover:underline flex gap-2 items-center">View Details <ArrowRightIconLink /></a>
+        </div>
+
+        <div className="bg-white p-8 rounded-lg overEffect">
+          <div className="flex items-center  gap-3 mb-4">
+            <IVR />
+            <h3 className="text-[24px] font-semibold o2-title mb-2">IVRAI</h3>
+          </div>
+          
+          <p className="text-gray-600 mb-4">
+            AI agentic IVR autonomously understand, converses with, and acts on customer requests, surpassing traditional IVR.
+          </p>
+          <a href="/products" className="text-blue-600 hover:underline flex gap-2 items-center">View Details <ArrowRightIconLink /></a>
+        </div>
+
         <div className="bg-white p-8 rounded-lg overEffect">
           <div className="flex items-center  gap-3 mb-4">
              <AISearch />
@@ -29,49 +78,7 @@ const OurAIProducts = () => {
           </p>
           <a href="/products" className="text-blue-600 hover:underline flex gap-2 items-center">View Details <ArrowRightIconLink /></a>
         </div>
-        <div className="bg-white p-8 rounded-lg overEffect">
-          <div className="flex items-center  gap-3 mb-4">
-            <AIOpsIcon />
-            <h3 className="text-[24px] font-semibold o2-title mb-2">AI Ops</h3>
-          </div>
-          
-          <p className="text-gray-600 mb-4">
-            AIOps stands for Artificial Intelligence for IT Operations and is the strategic use of AI and machine learning (ML) to automate and streamline IT...
-          </p>
-          <a href="/products" className="text-blue-600 hover:underline flex gap-2 items-center">View Details <ArrowRightIconLink /></a>
-        </div>
-        <div className="bg-white p-8 rounded-lg overEffect">
-          <div className="flex items-center  gap-3 mb-4">
-             <ClinicalAI />
-            <h3 className="text-[24px] font-semibold o2-title mb-2">ClinicalAI</h3>
-          </div>
-          <p className="text-gray-600 mb-4">
-            AI Medical Scribe automates clinical documentation in SOAP format, reduces admin work, and enhances patient care. It integrates with EHR and ICD-10, securely storing data per HIPAA standards on the client&apos;s cloud.
-          </p>
-          <a href="/products" className="text-blue-600 hover:underline flex gap-2 items-center">View Details <ArrowRightIconLink /></a>
-        </div>
-        <div className="bg-white p-8 rounded-lg overEffect">
-          <div className="flex items-center  gap-3 mb-4">
-            <EmployeeEnablement />
-            <h3 className="text-[24px] font-semibold o2-title mb-2">Employee Enablement</h3>
-          </div>
-          
-          <p className="text-gray-600 mb-4">
-            A single AI-powered interface centralizes insights across Finance, HR, Claims, and more, simplifying data access. It streamlines reporting, boosts productivity, and reduces costs by eliminating multiple platforms.
-          </p>
-          <a href="/products" className="text-blue-600 hover:underline flex gap-2 items-center">View Details <ArrowRightIconLink /></a>
-        </div>
-        <div className="bg-white p-8 rounded-lg overEffect">
-          <div className="flex items-center  gap-3 mb-4">
-            <FaxAutomation />
-            <h3 className="text-[24px] font-semibold o2-title mb-2">Fax Automation</h3>
-          </div>
-          
-          <p className="text-gray-600 mb-4">
-            AI Fax Automation reads, classifies, and routes faxes automatically, reducing manual work for healthcare staff. It uses NLP to extract data accurately, speeding up workflows and improving patient communication.
-          </p>
-          <a href="/products" className="text-blue-600 hover:underline flex gap-2 items-center">View Details <ArrowRightIconLink /></a>
-        </div>
+      
       </div>
     </div>
   );
