@@ -39,5 +39,6 @@ export { default as ClinicalAI } from './ClinicalAI';
 export { default as FaxAutomation  } from './FaxAutomation';
 export { default as EmployeeEnablement } from './EmployeeEnablement';
 export { default as WatchVideo } from './WatchVideo';
+export { default as IVR } from './IVR';
 
 // Add more icons here

@@ -22,7 +22,7 @@ const FaxAutomationCom = () => {
         </p>
         <div className="flex space-x-4 pt-6">
             <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
-                     Explore ClinicalAI
+                     Explore Fax Automation
             </button>
             <button className=" flex gap-2 items-center" onClick={handleWatchVideo}>Watch video <WatchVideo/></button>
         </div>
