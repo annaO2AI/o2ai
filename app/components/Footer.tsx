@@ -1,14 +1,55 @@
-
 "use client"
 
 import Link from "next/link"
 import Image from "next/image"
 import { usePathname } from "next/navigation"
+import { useState } from "react"
 import {LoganimationsIcon, LocationIcon, FacebookIcon, TwitterIcon, LinkedinIcon, LoganimationsIconWhite } from "./icons"
 
 export default function Footer() {
   const pathname = usePathname()
-  
+  const [email, setEmail] = useState("")
+  const [isLoading, setIsLoading] = useState(false)
+  const [message, setMessage] = useState("")
+
+  const handleSubscribe = async (e: React.FormEvent) => {
+    e.preventDefault()
+    
+    if (!email) {
+      setMessage("Please enter your email address")
+      return
+    }
+
+    setIsLoading(true)
+    setMessage("")
+
+    try {
+      const response = await fetch('https://contact-api-g5gkhafve3g0a6ey.centralus-01.azurewebsites.net/api/subscribe', {
+        method: 'POST',
+        headers: {
+          'accept': 'application/json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email: email
+        })
+      })
+
+      if (response.ok) {
+        setMessage("Thank you for subscribing!")
+        setEmail("")
+      } else {
+        const errorData = await response.json()
+        setMessage(errorData.message || "Subscription failed. Please try again.")
+      }
+    } catch (error) {
+      console.error('Subscription error:', error)
+      setMessage("Network error. Please try again later.")
+    } finally {
+      setIsLoading(false)
+    }
+  }
+
   return (
     <footer className="bg-[#020425]">
       <div className="bg-[#0975BB]">
@@ -26,19 +67,33 @@ export default function Footer() {
             <h3 className="text-[#fff] text-[34px]">
               Subscribe to our newsletter for the<br></br> latest updates and insights.
             </h3>
-            <div className="flex w-[350px]">
-              <input
-                  id="price"
-                  name="price"
-                  type="text"
+            <form onSubmit={handleSubscribe} className="flex flex-col">
+              <div className="flex w-[350px]">
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   placeholder="@ Enter your email"
                   className=" rounded-tl-full rounded-bl-full block min-w-0 grow bg-[#545CDB] py-1.5 pr-3 pl-4 text-base text-white placeholder:text-white focus:outline-none sm:text-sm/6"
+                  disabled={isLoading}
                 />
-              <button className="bg-white text-[#282828] p-3 rounded-tr-full rounded-br-full px-6 text-[18px] font-bold">
-                Subscribe
-              </button>
-            </div>
-            <div className="text-[#fff] text-[16px] pt-3">Stay ahead with the latest updates, insights, and <br></br>events from O2.AI</div>
+                <button 
+                  type="submit"
+                  disabled={isLoading}
+                  className="bg-white text-[#282828] p-3 rounded-tr-full rounded-br-full px-6 text-[18px] font-bold disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  {isLoading ? "Subscribing..." : "Subscribe"}
+                </button>
+              </div>
+              {message && (
+                <div className={`text-[16px] pt-3 ${message.includes("Thank you") ? "text-green-400" : "text-yellow-400"}`}>
+                  {message}
+                </div>
+              )}
+              <div className="text-[#fff] text-[16px] pt-3">Stay ahead with the latest updates, insights, and <br></br>events from O2.AI</div>
+            </form>
           </div>
         </div>
       </div>
