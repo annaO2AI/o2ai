@@ -6,7 +6,7 @@ import AISearch from "./AISearch"
 import ClinicalAIComp from "./ClinicalAI"
 import AIOps from "./AIOps"
 import EmployeeEnablement from "./EmployeeEnablement";
-import FaxAutomationCom from "./FaxAutomation";
+import FaxAutomationNew from "./FaxAutomation-new";
 
 export default function HomeMain() {
 
@@ -30,8 +30,8 @@ export default function HomeMain() {
             <div className="bg-[#fff]">
                <EmployeeEnablement />
            </div>
-           <div className="bg-[#fff] pb-12 pt-12">
-               <FaxAutomationCom />
+           <div className="bg-[#fff] pb-12 pt-0">
+               <FaxAutomationNew />
            </div>
     </section>
   );

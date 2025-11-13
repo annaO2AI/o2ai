@@ -106,4 +106,10 @@ body {
     background-position: bottom right;
     background-repeat: no-repeat;
   }
+  .bg-fax-automation{
+    background-image: url(../public/fax-automation-bg.png); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+  }
 }
