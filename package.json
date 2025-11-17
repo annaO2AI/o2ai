@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@heroicons/react": "^2.2.0",
     "@tsparticles/all": "^3.8.1",
     "@tsparticles/react": "^3.0.0",
     "@types/node": "22.14.0",
