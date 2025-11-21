@@ -10,7 +10,7 @@ const HeaderBanner: React.FC = () => {
     router.push('/products');
   };
   return (
-    <div className="bg-gradient-to-r from-[#00548B] to-[#402fc5] text-white  relative">
+    <div className="bg-gradient-to-r from-[#0975BB] to-[#402fc5] text-white  relative">
         <div className='banner-bg-wrapper p-16'>
             <div className="max-w-7xl mx-auto flex items-center  m-16">
                 <div className='w-[67%]'>

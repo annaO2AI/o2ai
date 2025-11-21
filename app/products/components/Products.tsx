@@ -12,7 +12,7 @@ export default function HomeMain() {
 
   return (
     <section className="min-h-[600px]">
-          <div className="bg-[#070A40]">
+          <div className="bg-[#0d65a9]">
              <ProductsBanner />
            </div>
            <div className="bg-[#fff]">

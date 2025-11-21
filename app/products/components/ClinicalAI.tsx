@@ -13,7 +13,7 @@ const ClinicalAIComp = () => {
         setIsVideoOpen(false);
       };
   return (
-    <div className="bg-gradient-to-r from-[#161D5D] to-[#3BCAF5]  flex items-center justify-center w-full max-w-7xl mx-auto  rounded-xl relative my-16">
+    <div className="bg-gradient-to-r from-[#0d65a9] to-[#213E99]  flex items-center justify-center w-full max-w-7xl mx-auto  rounded-xl relative my-16">
       <div className='absolute right-[-30px] top-[-30px]'>
         <ClinicalAI />
       </div>

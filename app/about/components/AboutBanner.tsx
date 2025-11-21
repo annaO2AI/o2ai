@@ -11,7 +11,7 @@ const AboutBanner: React.FC = () => {
     router.push('/products');
   };
   return (
-    <div className="bg-gradient-to-r from-[#00548B] to-[#402fc5] text-white  ">
+    <div className="bg-gradient-to-r from-[#0975BB] to-[#402fc5] text-white  ">
         <div className='about-bg-wrapper pb-10'>
              <Breadcrumb />
               <div className="max-w-7xl mx-auto flex items-center m-16">

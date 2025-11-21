@@ -58,14 +58,14 @@ body {
     color: #0975BB;
   }
   .Product-bg-wrapper{
-    background-color: #06093C;
+    background-color: #0d65a9;
     background-image: url(../public/productBanner-bg.png); 
     background-position: bottom right;
     background-repeat: no-repeat;
     min-height: 460px;
   }
    .about-bg-wrapper{
-    background-color: #000103;
+    background-color: #0d65a9;
     background-image: url(../public/Abouto2Al.png); 
     background-position: center -40px;
     background-repeat: no-repeat;
@@ -101,7 +101,7 @@ body {
     box-shadow: 1px 1px 30px #00000033  ;
   }
   .IntegrationsSection{
-    background-color: #06093C;
+    background-color: #0d65a9;
     background-image: url(../public/productBanner-bg.png); 
     background-position: bottom right;
     background-repeat: no-repeat;
