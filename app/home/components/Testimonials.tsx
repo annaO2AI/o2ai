@@ -1,22 +1,22 @@
 import React, { useState, useEffect } from 'react';
 
 const testimonials = [
-  {
-    id: 1,
-    rating: 5,
-    text: '"O2.AI has completely transformed how our internal teams operate. Tasks that used to take hours are now automated within minutes. Our ..."',
-    author: 'Armando McClure',
-    role: 'Senior Manager, Operations',
-    image: 'https://via.placeholder.com/50'
-  },
-  {
-    id: 2,
-    rating: 5,
-    text: '"O2.AI has completely transformed how our internal teams operate. Tasks that used to take hours are now automated within minutes. Our ..."',
-    author: 'Jamie Wilkinson',
-    role: 'Chief Technology Officer',
-    image: 'https://via.placeholder.com/50'
-  },
+  // {
+  //   id: 1,
+  //   rating: 5,
+  //   text: '"O2.AI has completely transformed how our internal teams operate. Tasks that used to take hours are now automated within minutes. Our ..."',
+  //   author: 'Armando McClure',
+  //   role: 'Senior Manager, Operations',
+  //   image: 'https://via.placeholder.com/50'
+  // },
+  // {
+  //   id: 2,
+  //   rating: 5,
+  //   text: '"O2.AI has completely transformed how our internal teams operate. Tasks that used to take hours are now automated within minutes. Our ..."',
+  //   author: 'Jamie Wilkinson',
+  //   role: 'Chief Technology Officer',
+  //   image: 'https://via.placeholder.com/50'
+  // },
   {
     id: 3,
     rating: 4,

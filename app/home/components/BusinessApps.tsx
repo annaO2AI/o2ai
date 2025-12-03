@@ -10,7 +10,7 @@ const BusinessApps = () => {
          <Image
             src="/Powerful integrations.png"
             alt="I Search"
-            width={1066}
+            width={770}
             height={138}
             className="imagfilter m-auto"
           />
