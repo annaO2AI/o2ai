@@ -15,7 +15,7 @@ const HeaderBanner: React.FC = () => {
             <div className="max-w-7xl mx-auto flex items-center  m-16">
                 <div className='w-[67%]'>
                     <h1 className="text-[55px] font-bold leading-[1.1] pb-2">O2.AI Powering <br></br>Smarter Decisions <br></br>Across Your Workflow</h1>
-                    <p className="mt-2 text-[26px] mb-6 leading-[1.1]">Boost the ROI for Your Enterprise & <br></br>Clinical Applications, IT Infrastructure & <br></br>Shared Services</p>
+                    <p className="mt-2 text-[26px] mb-6 leading-[1.1]">Boost the ROI for Your Enterprise, <br></br>Clinical Applications, IT Infrastructure & <br></br>Shared Services</p>
                     <button onClick={handleExploreClick} className="mt-4 bg-white text-blue-900 px-6 py-3 rounded-lg hover:bg-gray-200 font-bold text-[21px]">
                         Explore AI Product
                     </button>
