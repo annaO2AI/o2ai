@@ -9,7 +9,7 @@ const Integrations = () => {
                 <h1 className="text-4xl font-bold mb-4 text-[16px] text-[#BEB5FF]">INTEGRATIONS</h1>
                 <h2 className="text-2xl mb-6 text-[55px] leading-[1.1] font-bold">Seamlessness Technology integrations with tools</h2>
                 <p className="text-lg mb-4 text-[20px] w-[70%]">
-                    O2.AI works with leading tools such as Python, Docker, Databricks, Servicenow, Azure and Azure SQL, streamlining your workflow for enhanced efficiency and productivity.
+                    O2.AI works with leading tools such as Python, Docker, Databricks, ServiceNow, Azure, and Azure SQL, streamlining your workflow for enhanced efficiency and productivity.
                 </p>
             </div>
             <div className='w-[40%]'>

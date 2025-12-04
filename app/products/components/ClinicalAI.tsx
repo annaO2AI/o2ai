@@ -24,7 +24,7 @@ const ClinicalAIComp = () => {
             <h2 className="text-[40px]  text-[#ffffff] mt-4 ">ClinicalAI</h2>
           </div>
           <p className="text-[#ffffff] mb-4">
-            AI medical scribe for all clinicians. This module is the ambient AI medical scribe that automates clinical documentation to reduce administrative burdens and enable healthcare professionals to focus more on patient care. This stores the raw text in the EHR platform along with the summarized view. The module is also integrated with ICD-10. This module is developed in accordance with HIPAA; the conversation and chart summary are stored in the clients premises (cloud).
+            AI medical scribe for all clinicians. This module is the ambient AI medical scribe that automates clinical documentation to reduce administrative burdens and enable healthcare professionals to focus more on patient care. It stores the raw text in the EHR platform along with the summarized view. The module is also integrated with ICD-10. This module is developed in accordance with HIPAA; the conversation and chart summary are stored in the clients premises (cloud).
           </p>
           <div className="flex space-x-4 pt-6">
             <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">

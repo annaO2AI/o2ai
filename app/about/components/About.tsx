@@ -23,7 +23,7 @@ export default function About() {
       <div className="bg-[#fff] pt-16 pb-16" >
         <div className="text-center pb-16">
           <h3 className="o2-title text-[36px] font-bold">Our Vision</h3>
-          <div className="o2-sub-title text-[20px]">At O2, our vision is a world where AI will prompt and extend anthropoid cognition to enable <br></br>institutions and individuals to live up to their potential. Our technology seamlessly <br></br>enhances every individual&apos;s pursuit of well-being.</div>
+          <div className="o2-sub-title text-[20px]">At O2.AI, our vision is a world where AI will prompt and extend anthropoid cognition to enable <br></br>institutions and individuals to live up to their potential. Our technology seamlessly <br></br>enhances every individual&apos;s pursuit of well-being.</div>
         </div>
         <Image
           src="/ourVison.png"
@@ -62,7 +62,7 @@ export default function About() {
             <div>
               <h3 className="text-xl font-semibold text-gray-800 mb-2">Goal</h3>
               <p className="text-base leading-relaxed osubtitle">
-                At O2, our investing thesis centers on compelling technology and commercial potential to scale within healthcare’s
+                At O2.AI, our investing thesis centers on compelling technology and commercial potential to scale within healthcare’s
                 complex ecosystem. Our goal is to provide healthcare AI with the necessary insights to inform their market readiness
                 and empower payer and provider leaders with valuable takeaways as they build and invest in their AI strategies.
               </p>
@@ -74,7 +74,7 @@ export default function About() {
           <div className="max-w-5xl mx-auto space-y-8">
             {/* Title */}
             <p className="text-lg md:text-xl font-semibold o2-title mt-6">
-              At O2, we utilize AI to empower organizations to foster collaborative <br/>thinking and accelerate workplace innovation by:
+              At O2.AI, we utilize AI to empower organizations to foster collaborative <br/>thinking and accelerate workplace innovation by:
             </p>
 
             {/* Grid of Features */}

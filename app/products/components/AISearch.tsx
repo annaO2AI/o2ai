@@ -28,7 +28,7 @@ const AISearch = () => {
         <div className="w-[40%] py-4">
           <h2 className="text-[30px] font-bold o2-title mb-4">AI Search</h2>
           <p className="text-gray-600 mb-4">
-            Easy to configure, straight to the point – our chatbots will strike up conversations effortlessly with candidates. Summarize the resume with key points and does compare with other resumes to make it easier for recruiters to streamline the selection process. AI-powered automation improves recruitment by handling time-consuming, repetitive tasks like resume screening, candidate sourcing, and interview scheduling. It can process large volumes of data much faster and more accurately than humans, identifying the top candidates for specific roles based on job requirements.
+            Easy to configure, straight to the point – our chatbots will strike up conversations effortlessly with candidates. It summarizes the resume with key points and compares it with other resumes to make it easier for recruiters to streamline the selection process. AI-powered automation improves recruitment by handling time-consuming, repetitive tasks like resume screening, candidate sourcing, and interview scheduling. It can process large volumes of data much faster and more accurately than humans, identifying the top candidates for specific roles based on job requirements.
           </p>
           <div className="flex space-x-4">
             <button className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
