@@ -39,9 +39,9 @@ export default function Header() {
           >
             Contact
           </Link>
-          <div className="bg-[#0975BB] rounded-full w-[40px] h-[40px] flex items-center justify-center">
+          {/* <div className="bg-[#0975BB] rounded-full w-[40px] h-[40px] flex items-center justify-center">
             <SearchIcon />
-          </div>
+          </div> */}
           <a href="/contact" className="bg-[#0975BB] flex text-white p-2 rounded-full gap-2 justify-center items-center px-6 ">
             <span>Request Demo</span>
             <span><ArrowRightIcon /></span>

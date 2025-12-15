@@ -13,7 +13,7 @@ const ContactBanner: React.FC = () => {
   return (
     <div className="bg-gradient-to-r from-[#0975BB] to-[#402fc5] text-white  ">
         
-        <div className='Product-bg-wrapper pb-10'>
+        <div className='Product-bg-wrapper pb-10 baaner-hight'>
              <Breadcrumb />
               <div className="max-w-7xl mx-auto flex items-center m-16 justify-center">
                   <div className='text-center'>

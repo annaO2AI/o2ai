@@ -62,7 +62,6 @@ body {
     background-image: url(../public/productBanner-bg.png); 
     background-position: bottom right;
     background-repeat: no-repeat;
-    min-height: 460px;
   }
    .about-bg-wrapper{
     background-color: #0d65a9;
@@ -114,5 +113,8 @@ body {
   }
   .product-padding{
         padding-bottom: 100px;
+  }
+  .baaner-hight{
+    height: 440px;
   }
 }
