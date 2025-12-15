@@ -88,7 +88,7 @@ const OurAIProducts = () => {
 
   return (
     <>
-      <div className="py-12 px-4 pt-16">
+      <div className="py-12 px-4 pt-16 product-padding">
         <h2 className="text-[40px] font-bold text-center mt-8 mb-12 o2-title leading-[1.2]">
           Our AI product helps make your  <br /> operations faster, safer, and better.
         </h2>
