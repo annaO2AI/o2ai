@@ -18,8 +18,8 @@ const ProductsBanner: React.FC = () => {
              <Breadcrumb />
               <div className="max-w-7xl mx-auto flex items-center m-16">
                   <div className='w-[60%]'>
-                      <h1 className="text-[50px] font-bold leading-[1.1] pb-2">Transforming Workflows <br></br>with Intelligent Automation</h1>
-                      <p className="mt-2 text-[24px] mb-6 leading-[1.1]">Boost the ROI for Your Enterprise, <br></br>Clinical Applications, IT Infrastructure <br></br>& Shared Services</p>
+                      <h1 className="text-[50px] font-bold leading-[1.1] pb-2">AI-Driven Insights Meet <br></br> Enterprise-Grade Automation</h1>
+                      <p className="mt-2 text-[24px] mb-6 leading-[1.1]">Powered by the O2AI platform.</p>
                   </div>
                   <div className="flex space-x-4">
                       {/* <Image
