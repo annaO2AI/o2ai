@@ -114,7 +114,7 @@ const OurAIProducts = () => {
 
       {/* Modal / Popup */}
       {isModalOpen && selectedProduct && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black bg-opacity-60 backdrop-blur-sm">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black bg-opacity-60 backdrop-blur-sm" onClick={closeModal}>
           <div
             className="relative bg-white rounded-2xl shadow-2xl  w-[70%] max-h-screen overflow-y-auto animate-in fade-in zoom-in duration-300 p-12"
             onClick={(e) => e.stopPropagation()}
