@@ -179,7 +179,7 @@ export default function Footer() {
       <div className="bg-[#161D5D]">
           <div className="w-full max-w-7xl mx-auto px-4 flex items-center justify-between gap-3 p-6" >
                 <div className="text-white text-[14px] font-normal opacity-[.67]">O2.AI</div>
-                <div className="text-white text-[14px] font-normal opacity-[.67]">© 2025 O2.AI. All rights reserved.</div>
+                <div className="text-white text-[14px] font-normal opacity-[.67]">© 2026 O2.AI. All rights reserved.</div>
                 <div className="flex gap-4 items-center justify-center">
                   <FacebookIcon />
                   {/* <TwitterIcon /> */}
