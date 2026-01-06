@@ -4,7 +4,7 @@ import { EmailClient, EmailMessage } from '@azure/communication-email';
 
 
 // Debug: Log environment variable presence
-console.log('ACS_CONNECTION_STRING exists:', !!process.env.ACS_CONNECTION_STRING);
+// console.log('ACS_CONNECTION_STRING exists:', !!process.env.ACS_CONNECTION_STRING);
 
 const connectionString = process.env.ACS_CONNECTION_STRING;
 const senderAddress = 'DoNotReply@o2aicorp.com';
