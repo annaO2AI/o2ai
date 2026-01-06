@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Image from 'next/image';
 import {
   AiCallSummary,
   AISearch,
@@ -138,11 +139,12 @@ const OurAIProducts = () => {
                   {/* Image (if exists) */}
                   {selectedProduct.popupImages && (
                     <div className="mb-8 -mx-8 w-[40%] h-[320px] flex justify-center">
-                      <img
+                      <Image 
                         src={selectedProduct.popupImages}
                         alt={`${selectedProduct.title} screenshot`}
+                        width={300}
+                        height={320}
                         className="w-full"
-                        loading="lazy"
                       />
                     </div>
                   )}
