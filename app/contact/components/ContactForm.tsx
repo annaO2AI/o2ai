@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState } from 'react';
 
 const ContactUs = () => {
@@ -10,61 +12,59 @@ const ContactUs = () => {
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState('');
-  const [formType, setFormType] = useState<'contact' | 'demo'>('contact'); // Track which form type
+  const [submitStatus, setSubmitStatus] = useState<'success' | 'error' | ''>('');
+  const [errorDetails, setErrorDetails] = useState<string>('');
+  const [formType, setFormType] = useState<'contact' | 'demo'>('contact');
 
-  const handleChange = (e: any) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { id, value } = e.target;
-    setFormData(prevState => ({
-      ...prevState,
-      [id]: value
-    }));
+    setFormData(prev => ({ ...prev, [id]: value }));
   };
 
-  const handleSubmit = async (e: any) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitStatus('');
+    setErrorDetails('');
+
+    console.log('🚀 Submitting form...');
+    console.log('Form data:', formData);
 
     try {
-      let response;
+      console.log('📤 Sending POST request to /api/contact');
       
-      if (formType === 'demo') {
-        // Demo API call
-        response = await fetch('https://contact-api-g5gkhafve3g0a6ey.centralus-01.azurewebsites.net/api/demo', {
-          method: 'POST',
-          headers: {
-            'accept': 'application/json',
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            first_name: formData.first_name,
-            last_name: formData.last_name,
-            email: formData.email,
-            company_name: formData.company_name
-          })
-        });
-      } else {
-        // Contact API call (original)
-        response = await fetch('https://contact-api-g5gkhafve3g0a6ey.centralus-01.azurewebsites.net/api/contact', {
-          method: 'POST',
-          headers: {
-            'accept': 'application/json',
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            first_name: formData.first_name,
-            last_name: formData.last_name,
-            email: formData.email,
-            subject: formData.subject,
-            message: formData.message
-          })
-        });
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          ...formData,
+          formType,
+        }),
+      });
+
+      console.log('📥 Response status:', response.status);
+      console.log('📥 Response ok:', response.ok);
+
+      // Try to get response text first
+      const responseText = await response.text();
+      console.log('📥 Response text:', responseText);
+
+      // Try to parse as JSON
+      let responseData;
+      try {
+        responseData = JSON.parse(responseText);
+        console.log('📥 Response data:', responseData);
+      } catch (parseError) {
+        console.error('❌ Failed to parse response as JSON:', parseError);
+        console.error('Raw response:', responseText);
+        throw new Error(`Server returned invalid JSON: ${responseText.substring(0, 100)}`);
       }
 
       if (response.ok) {
+        console.log('✅ Success!');
         setSubmitStatus('success');
-        // Reset form
         setFormData({
           first_name: '',
           last_name: '',
@@ -74,22 +74,26 @@ const ContactUs = () => {
           message: ''
         });
       } else {
+        console.error('❌ Server returned error status:', response.status);
+        console.error('Error data:', responseData);
         setSubmitStatus('error');
-        console.error('Failed to submit form:', await response.text());
+        setErrorDetails(JSON.stringify(responseData, null, 2));
       }
-    } catch (error) {
+    } catch (error: any) {
+      console.error('❌ Submission error:', error);
+      console.error('Error message:', error.message);
+      console.error('Error stack:', error.stack);
       setSubmitStatus('error');
-      console.error('Error submitting form:', error);
+      setErrorDetails(error.message);
     } finally {
       setIsSubmitting(false);
     }
   };
 
-  // Toggle between contact and demo forms
   const toggleFormType = (type: 'contact' | 'demo') => {
     setFormType(type);
     setSubmitStatus('');
-    // Reset form when switching
+    setErrorDetails('');
     setFormData({
       first_name: '',
       last_name: '',
@@ -101,36 +105,34 @@ const ContactUs = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center p-12 bg-white rounded-xl shadow-md mx-auto w-[950px] contact-form-c ">
+    <div className="flex flex-col items-center justify-center p-12 bg-white rounded-xl shadow-md mx-auto w-[950px] contact-form-c">
       <h1 className="text-4xl font-bold text-gray-800 mb-6">Contact Us</h1>
       
-      {/* Form Type Toggle */}
       <div className="flex gap-4 mb-6">
         <button
           type="button"
+          onClick={() => toggleFormType('contact')}
           className={`px-6 py-2 rounded-lg font-semibold transition-colors ${
             formType === 'contact' 
               ? 'bg-blue-500 text-white' 
               : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
           }`}
-          onClick={() => toggleFormType('contact')}
         >
           General Inquiry
         </button>
         <button
           type="button"
+          onClick={() => toggleFormType('demo')}
           className={`px-6 py-2 rounded-lg font-semibold transition-colors ${
             formType === 'demo' 
               ? 'bg-blue-500 text-white' 
               : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
           }`}
-          onClick={() => toggleFormType('demo')}
         >
           Request Demo
         </button>
       </div>
-      
-      {/* Success Message */}
+
       {submitStatus === 'success' && (
         <div className="mb-6 p-4 bg-green-100 border border-green-400 text-green-700 rounded w-[80%]">
           {formType === 'demo' 
@@ -139,11 +141,20 @@ const ContactUs = () => {
           }
         </div>
       )}
-      
-      {/* Error Message */}
+
       {submitStatus === 'error' && (
         <div className="mb-6 p-4 bg-red-100 border border-red-400 text-red-700 rounded w-[80%]">
-          There was an error submitting your {formType === 'demo' ? 'demo request' : 'message'}. Please try again.
+          <p className="font-bold mb-2">
+            There was an error submitting your {formType === 'demo' ? 'demo request' : 'message'}.
+          </p>
+          {errorDetails && (
+            <details className="mt-2">
+              <summary className="cursor-pointer font-semibold">Show error details</summary>
+              <pre className="mt-2 p-2 bg-red-50 text-xs overflow-auto max-h-40">
+                {errorDetails}
+              </pre>
+            </details>
+          )}
         </div>
       )}
 
@@ -178,7 +189,7 @@ const ContactUs = () => {
             />
           </div>
         </div>
-        
+
         <div className="mb-4">
           <label className="block o2-title text-[16px] font-bold mb-2" htmlFor="email">
             Email <span className="text-red-500">*</span>
@@ -194,7 +205,6 @@ const ContactUs = () => {
           />
         </div>
 
-        {/* Company Name Field - Only for Demo Form */}
         {formType === 'demo' && (
           <div className="mb-4">
             <label className="block o2-title text-[16px] font-bold mb-2" htmlFor="company_name">
@@ -212,7 +222,6 @@ const ContactUs = () => {
           </div>
         )}
 
-        {/* Subject and Message Fields - Only for Contact Form */}
         {formType === 'contact' && (
           <>
             <div className="mb-4">

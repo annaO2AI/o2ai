@@ -42,3 +42,6 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 "# o2aicorp" 
 "# o2ai" 
 "# o2ai" 
+
+# resend
+https://resend.com/onboarding

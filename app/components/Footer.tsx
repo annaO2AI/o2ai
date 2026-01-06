@@ -12,43 +12,43 @@ export default function Footer() {
   const [isLoading, setIsLoading] = useState(false)
   const [message, setMessage] = useState("")
 
-  const handleSubscribe = async (e: React.FormEvent) => {
-    e.preventDefault()
-    
-    if (!email) {
-      setMessage("Please enter your email address")
-      return
-    }
+// In your Footer component — only the handleSubscribe function changes
 
-    setIsLoading(true)
-    setMessage("")
+const handleSubscribe = async (e: React.FormEvent) => {
+  e.preventDefault();
 
-    try {
-      const response = await fetch('https://contact-api-g5gkhafve3g0a6ey.centralus-01.azurewebsites.net/api/subscribe', {
-        method: 'POST',
-        headers: {
-          'accept': 'application/json',
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          email: email
-        })
-      })
-
-      if (response.ok) {
-        setMessage("Thank you for subscribing!")
-        setEmail("")
-      } else {
-        const errorData = await response.json()
-        setMessage(errorData.message || "Subscription failed. Please try again.")
-      }
-    } catch (error) {
-      console.error('Subscription error:', error)
-      setMessage("Network error. Please try again later.")
-    } finally {
-      setIsLoading(false)
-    }
+  if (!email || !email.includes('@')) {
+    setMessage("Please enter a valid email address");
+    return;
   }
+
+  setIsLoading(true);
+  setMessage("");
+
+  try {
+    const response = await fetch('/api/subscribe', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ email }),
+    });
+
+    const data = await response.json();
+
+    if (response.ok) {
+      setMessage(data.message || "Thank you for subscribing!");
+      setEmail("");
+    } else {
+      setMessage(data.message || "Subscription failed. Please try again.");
+    }
+  } catch (error) {
+    console.error('Subscription error:', error);
+    setMessage("Network error. Please try again later.");
+  } finally {
+    setIsLoading(false);
+  }
+};
 
   return (
     <footer className="bg-[#020425]">
