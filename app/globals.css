@@ -71,10 +71,9 @@ body {
   }
   .mission-section-bg{
     background-color: #2B5758;
-    background-image: url(../public/missioBg.png); 
-    background-position: -190px -260px;
+    background-image: url(../public/aiHealtbg.png); 
     background-repeat: no-repeat;
-    background-size: 110%;
+    background-size: cover;
     min-height: 600px;
     align-content: center;
   }
